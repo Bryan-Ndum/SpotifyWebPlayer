@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spotify Track Player</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify Track Player</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>🎵 Spotify Track Player</h1>
-        <p>Enter a **Spotify track ID** and press **Play** to listen to the song.</p>
+  <div class="container">
+    <h1>🎵 Spotify Track Player</h1>
+    <p>Enter a **Spotify track ID** and press **Play** to listen to the song.</p>
 
-        <form id="trackForm">
-            <input type="text" id="trackId" placeholder="Enter Spotify Track ID..." required>
-            <button type="submit">▶ Play Track</button>
-        </form>
+    <form id="trackForm">
+      <input type="text" id="trackId" placeholder="Enter Spotify Track ID..." required>
+      <button type="submit">▶ Play Track</button>
+    </form>
 
-        <div id="player"></div>
-    </div>
+    <div id="player"></div>
+  </div>
+
+  <!-- Ensure script.js is loaded -->
+  <script src="script.js" defer></script>
 </body>
 </html>
+
