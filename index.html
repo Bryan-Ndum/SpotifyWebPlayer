@@ -1,21 +1,24 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify Track Player</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <h1>Spotify Track Player</h1>
-    <form id="trackForm">
-        <label for="trackId">Enter Spotify Track ID:</label>
-        <input type="text" id="trackId" placeholder="e.g., 6rqhFgbbKwnb9MLmUQDhG6" required>
-        <button type="submit">Play Track</button>
-    </form>
+    <div class="container">
+        <h1>🎵 Spotify Track Player</h1>
+        <p>Enter a **Spotify track ID** and press **Play** to listen to the song.</p>
 
-    <div id="player"></div>
+        <form id="trackForm">
+            <input type="text" id="trackId" placeholder="Enter Spotify Track ID..." required>
+            <button type="submit">▶ Play Track</button>
+        </form>
 
-    <script src="script.js"></script>
+        <div id="player"></div>
+    </div>
 </body>
 </html>
+
