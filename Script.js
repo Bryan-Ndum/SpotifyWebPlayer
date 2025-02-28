@@ -5,6 +5,8 @@ document.getElementById("trackForm").addEventListener("submit", async function (
     if (trackId) {
         // Embed the Spotify player
         const embedUrl = `https://open.spotify.com/embed/track/${trackId}`;
+        console.log("Generated Embed URL:", embedUrl); // Debugging
+
         const iframe = document.createElement("iframe");
         iframe.setAttribute("src", embedUrl);
         iframe.setAttribute("width", "100%");
@@ -17,7 +19,7 @@ document.getElementById("trackForm").addEventListener("submit", async function (
         playerDiv.innerHTML = "";
         playerDiv.appendChild(iframe);
 
-        // Get artist name from the Spotify track ID page (No API Required)
+        // Get artist name from the Spotify track page (No API Required)
         const artistName = await fetchArtistName(trackId);
 
         if (artistName) {
@@ -30,7 +32,7 @@ document.getElementById("trackForm").addEventListener("submit", async function (
     }
 });
 
-// Fetch the artist name from the Spotify track page
+// Fetch the artist name from the Spotify track page (No API Key Required)
 async function fetchArtistName(trackId) {
     try {
         const response = await fetch(`https://open.spotify.com/track/${trackId}`);
